@@ -54,11 +54,6 @@
 							<div class="ribbon"></div>
 						</div>
 						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
 						
 						<div class="icon-wrap icon-me hide" data-idx="3">
 							<div class="user"></div>
@@ -73,8 +68,6 @@
 					<ul class="tips-inner">
 						<li>Menu</li>
 						<li>Tags</li>
-						
-						<li>Links</li>
 						
 						
 						<li>About</li>
@@ -94,6 +87,8 @@
 				        
 							<li><a href="/archives">所有文章</a></li>
 				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -101,7 +96,7 @@
 							
 								<a class="github" target="_blank" href="/ikallen.github.com" title="github">github</a>
 					        
-								<a class="weibo" target="_blank" href="/weibo.com/ikallen" title="weibo">weibo</a>
+								<a class="weibo" target="_blank" href="http://www.weibo.com/ikallen" title="weibo">weibo</a>
 					        
 								<a class="mail" target="_blank" href="/xcheungching@gmail.com" title="mail">mail</a>
 					        
@@ -120,28 +115,10 @@
 				
 				
 				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
-			        
-			        </div>
-				</section>
-				
 
 				
 				
-				<section class="switch-part switch-part4">
+				<section class="switch-part switch-part3">
 				
 					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
 				</section>
@@ -176,6 +153,8 @@
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -184,7 +163,7 @@
 					
 						<a class="github" target="_blank" href="/ikallen.github.com" title="github">github</a>
 			        
-						<a class="weibo" target="_blank" href="/weibo.com/ikallen" title="weibo">weibo</a>
+						<a class="weibo" target="_blank" href="http://www.weibo.com/ikallen" title="weibo">weibo</a>
 			        
 						<a class="mail" target="_blank" href="/xcheungching@gmail.com" title="mail">mail</a>
 			        
@@ -198,10 +177,10 @@
 
       <div class="body-wrap">
   
-    <article id="post-Html5-BFC" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Html5-React入门" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/05/Html5-BFC/" class="article-date">
+      <a href="/2016/06/05/Html5-React入门/" class="article-date">
   	<time datetime="2016-06-05T04:23:30.000Z" itemprop="datePublished">2016-06-05</time>
 </a>
     </div>
@@ -215,7 +194,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/05/Html5-BFC/">React入门</a>
+      <a class="article-title" href="/2016/06/05/Html5-React入门/">React入门</a>
     </h1>
   
 
@@ -231,6 +210,11 @@
 <p>##为什么会出现前端框架？<br>做过后台的都知道，如果我们要把后台的数据显示到前台，其实会经历很多波折的！先从数据库中把数据获取到，解析到泛型List中，用后台代码遍历数据并嵌入到Html中执行，融入逻辑后显示在Html结构中。这个过程如果我们每次都按照原始方法做，浪费时间而且及容易出错。我们把这个问题总结下，其实这就是个MVC问题。故此，前端出现了很多有名的MVC框架，Backbone、Angular等。但最近以React最火，React不仅解决了前端的问题，而且解决了移动手持设备的问题，至少，我们以后发布AppStore审核的App不用等2周时间，也不用必须会Obj-C、Swift才能做iOS、更不用Java来做Android，融入NodeJS后，这才是真正意义的全栈开发！</p>
 <h2 id="牛刀小试"><a href="#牛刀小试" class="headerlink" title="牛刀小试"></a>牛刀小试</h2><p>学习React框架要用到两个js框架，一个是React.js，另一个是JSXTransformer.js。前者不多说，后者是把JSX转化成JS的转化器。<br>因为我们用React.js的时候最好配合JSX（语法见后续）。</p>
 <h3 id="1、Html模板"><a href="#1、Html模板" class="headerlink" title="1、Html模板"></a>1、Html模板</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../build/react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../build/JSXTransformer.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/jsx"</span>&gt;</span><span class="undefined"></span><br><span class="line">      // ** code start... **</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2、一个简单的例子"><a href="#2、一个简单的例子" class="headerlink" title="2、一个简单的例子"></a>2、一个简单的例子</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../build/react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../build/JSXTransformer.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"outer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/jsx"</span>&gt;</span><span class="undefined"></span><br><span class="line">      React.render(</span><br><span class="line">        React.createElement('div',null,'i am kallen!'),</span><br><span class="line">        document.getElementById('outer')</span><br><span class="line">      );</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中，React.render()是React框架最常用的函数，主要用来呈现或者渲染视图。语法如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ReactComponent render(</span><br><span class="line">  ReactElement element,</span><br><span class="line">  DOMElement container,</span><br><span class="line">  [<span class="function"><span class="keyword">function</span> <span class="title">callback</span>]</span><br><span class="line">)</span></span><br></pre></td></tr></table></figure>
+<p>ReactElement 是React中的类型，DOMElement是原型Js中的类型，第三个参数是可选回调函数。函数作用是把React创建的ReactElement对象添加到DOMElement对象中作为子结点，如果提供回调函数，添加成功后（也有可能是更新）执行回调函数。</p>
+<p>Chrome截图如下：其中data-reactid=”.0”是React框架自动生成的，为以后拓展使用。<br><img src="img/React.render.png" alt="render" title="render"></p>
 
       
     </div>
@@ -247,67 +231,6 @@
 	<a class="article-category-link" href="/categories/Html5/">Html5</a>
 	</div>
 
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/05/hello-world/" class="article-date">
-  	<time datetime="2016-06-05T03:40:24.000Z" itemprop="datePublished">2016-06-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
 
       
       <div class="clearfix"></div>
