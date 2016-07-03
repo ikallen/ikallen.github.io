@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/React/" style="font-size: 10px;">React</a>
+						<a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/VFC/" style="font-size: 10px;">VFC</a>
 					</div>
 				</section>
 				
@@ -224,6 +224,87 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Html5/">Html5</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-visual_format_content" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/05/visual_format_content/" class="article-date">
+  	<time datetime="2016-06-05T04:23:30.000Z" itemprop="datePublished">2016-06-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/05/visual_format_content/">Visual Format Content</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>翻译至：</p>
+<ul>
+<li><a href="http://www.w3.org/TR/CSS2/visuren.html#box-gen" target="_blank" rel="external">http://www.w3.org/TR/CSS2/visuren.html#box-gen</a></li>
+<li><a href="https://www.w3.org/TR/CSS2/visuren.html#block-boxes" target="_blank" rel="external">https://www.w3.org/TR/CSS2/visuren.html#block-boxes</a></li>
+</ul>
+<h2 id="块元素和块盒"><a href="#块元素和块盒" class="headerlink" title="块元素和块盒"></a>块元素和块盒</h2><h3 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h3><blockquote>
+<p>Block-level elements are those elements of the source document that are formatted visually as blocks (e.g., paragraphs). The following values of the ‘display’ property make an element block-level: ‘block’, ‘list-item’, and ‘table’.</p>
+</blockquote>
+<p>块元素（Block-level elements）是文档元素被格式化为可见的块，例如P标签。display的block、list-item、table都可以让一个元素成为块元素</p>
+<blockquote>
+<p>Block-level boxes are boxes that participate in a block formatting context. Each block-level element generates a principal block-level box that contains descendant boxes and generated content and is also the box involved in any positioning scheme. Some block-level elements may generate additional boxes in addition to the principal box: ‘list-item’ elements. These additional boxes are placed with respect to the principal box.</p>
+</blockquote>
+<p>块级盒子是主要的box参与BFC。每个块级元素生成一个重要的块级盒子（block-level box）包含后续盒子和生成的内容也是一个包含定位模式（positioning scheme）的盒子。除了主要的盒子，一些块元素也生成额外的盒子：一些 list-item 元素。这些额外的盒子是被放置到主盒子中。</p>
+<blockquote>
+<p>Except for table boxes, which are described in a later chapter, and replaced elements, a block-level box is also a block container box. A block container box either contains only block-level boxes or establishes an inline formatting context and thus contains only inline-level boxes. Not all block container boxes are block-level boxes: non-replaced inline blocks and non-replaced table cells are block containers but not block-level boxes. Block-level boxes that are also block containers are called block boxes.</p>
+</blockquote>
+<p>除了后续章节会提到 表盒子（table boxes）和可替代元素（replaced elements），块级盒子也是一个块容器盒。块容器盒要么只包含块级盒要么生成一个只包含行级盒的IFC。不是所有的块容器盒都是块级盒：不可代替的行（内）块和不可取代的table cell是块容器但是不是块级盒。<br>是块容器（block containers）的块级盒子（Block-level boxes）我们称之为块盒（block boxes）</p>
+<blockquote>
+<p>The three terms “block-level box,” “block container box,” and “block box” are sometimes abbreviated as “block” where unambiguous.</p>
+</blockquote>
+<p>block-level box、block container box、block box这三个术语，我们有时明确地简称为”block”。</p>
+<h3 id="匿名块盒"><a href="#匿名块盒" class="headerlink" title="匿名块盒"></a>匿名块盒</h3>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VFC/">VFC</a></li></ul>
 	</div>
 
       
