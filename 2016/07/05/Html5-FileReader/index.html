@@ -10,7 +10,7 @@
 
 https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader
 
-FileReader使用FileReader对象,web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容,可以使用File对象或者Blob对象来指定所要处理的文件或数据.其中File对象可以是来自用户在一个元素上选择文件后返回的FileL">
+FileReader使用FileReader对象,web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容,可以使用File对象或者Blob对象来指定所要处理的文件或数据.其中File对象可以是来自用户在一个input元素上选择文件后返回的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FileReader">
 <meta property="og:url" content="http://yoursite.com/2016/07/05/Html5-FileReader/index.html">
@@ -19,15 +19,15 @@ FileReader使用FileReader对象,web应用程序可以异步的读取存储在�
 
 https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader
 
-FileReader使用FileReader对象,web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容,可以使用File对象或者Blob对象来指定所要处理的文件或数据.其中File对象可以是来自用户在一个元素上选择文件后返回的FileL">
-<meta property="og:updated_time" content="2016-07-04T16:44:11.000Z">
+FileReader使用FileReader对象,web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容,可以使用File对象或者Blob对象来指定所要处理的文件或数据.其中File对象可以是来自用户在一个input元素上选择文件后返回的">
+<meta property="og:updated_time" content="2016-07-04T16:46:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FileReader">
 <meta name="twitter:description" content="Web API
 
 https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader
 
-FileReader使用FileReader对象,web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容,可以使用File对象或者Blob对象来指定所要处理的文件或数据.其中File对象可以是来自用户在一个元素上选择文件后返回的FileL">
+FileReader使用FileReader对象,web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容,可以使用File对象或者Blob对象来指定所要处理的文件或数据.其中File对象可以是来自用户在一个input元素上选择文件后返回的">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -83,7 +83,7 @@ FileReader使用FileReader对象,web应用程序可以异步的读取存储在�
 						<li>Tags</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -233,9 +233,9 @@ FileReader使用FileReader对象,web应用程序可以异步的读取存储在�
 <ul>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader</a></li>
 </ul>
-<h2 id="FileReader"><a href="#FileReader" class="headerlink" title="FileReader"></a>FileReader</h2><p>使用FileReader对象,web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容,可以使用File对象或者Blob对象来指定所要处理的文件或数据.其中File对象可以是来自用户在一个<input>元素上选择文件后返回的FileList对象,也可以来自拖放操作生成的 DataTransfer对象,还可以是来自在一个HTMLCanvasElement上执行GetAsFile()方法后的返回结果.</p>
+<h2 id="FileReader"><a href="#FileReader" class="headerlink" title="FileReader"></a>FileReader</h2><p>使用FileReader对象,web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容,可以使用File对象或者Blob对象来指定所要处理的文件或数据.其中File对象可以是来自用户在一个input元素上选择文件后返回的FileList对象,也可以来自拖放操作生成的 DataTransfer对象,还可以是来自在一个HTMLCanvasElement上执行GetAsFile()方法后的返回结果.</p>
 <h3 id="创建一个对象"><a href="#创建一个对象" class="headerlink" title="创建一个对象"></a>创建一个对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</span><br></pre></td></tr></table></figure>
-<h3 id="读取一个文件"><a href="#读取一个文件" class="headerlink" title="读取一个文件"></a>读取一个文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="comment">// input `type = file`</span></span><br><span class="line">	<span class="keyword">var</span> oIcon = <span class="built_in">document</span>.getElementById(<span class="string">'icon'</span>);</span><br><span class="line">	<span class="comment">// img tag to show selected image</span></span><br><span class="line">	<span class="keyword">var</span> oShow = <span class="built_in">document</span>.getElementById(<span class="string">'show'</span>);</span><br><span class="line"></span><br><span class="line">	oIcon.onchange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> file = <span class="keyword">this</span>.files[<span class="number">0</span>];</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</span><br><span class="line">		reader.readAsDataURL(file);</span><br><span class="line">		reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">			<span class="comment">// base64</span></span><br><span class="line">			<span class="comment">// console.log(this.result);</span></span><br><span class="line">			</span><br><span class="line">			oShow.src = <span class="keyword">this</span>.result;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="读取一个文件"><a href="#读取一个文件" class="headerlink" title="读取一个文件"></a>读取一个文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="comment">// input `type = file`</span></span><br><span class="line">	<span class="keyword">var</span> oIcon = <span class="built_in">document</span>.getElementById(<span class="string">'icon'</span>);</span><br><span class="line">	<span class="comment">// img tag to show selected image</span></span><br><span class="line">	<span class="keyword">var</span> oShow = <span class="built_in">document</span>.getElementById(<span class="string">'show'</span>);</span><br><span class="line"></span><br><span class="line">	oIcon.onchange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> file = <span class="keyword">this</span>.files[<span class="number">0</span>];</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</span><br><span class="line">		reader.readAsDataURL(file);</span><br><span class="line">		reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">			<span class="comment">// base64</span></span><br><span class="line">			<span class="comment">// console.log(this.result);</span></span><br><span class="line">			</span><br><span class="line">			oShow.src = <span class="keyword">this</span>.result;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
       
     </div>
