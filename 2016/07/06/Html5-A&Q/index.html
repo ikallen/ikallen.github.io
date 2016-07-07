@@ -17,7 +17,7 @@
 前言本文由我收集总结了一些前端面试题，初学者阅后也要用心钻研其中的原理，重要知识需要系统学习、透彻学习，形成自己的知识链。万不可投机取巧，临时抱佛脚只求面试侥幸混过关是错误的！也是不可能的！不可能的！不可能的！
 前端还是一个年轻的行业，新的行业标准， 框架， 库都不断在更新和新增，正如赫门在2015深JS大会上的《前端服务化之路》主题演讲中说的一句话：“每18至24个月，前端都会">
 <meta property="og:image" content="http://www.w3school.com.cn/i/ct_js_value.gif">
-<meta property="og:updated_time" content="2016-07-07T07:24:00.000Z">
+<meta property="og:updated_time" content="2016-07-07T07:33:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端开发面试题">
 <meta name="twitter:description" content="#前端开发面试题
@@ -301,102 +301,26 @@ JavaScript：
 <p>（1）行内元素有：a b span img input select strong（强调的语气）<br>（2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p</p>
 <p>（3）常见的空元素：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span> <span class="tag">&lt;<span class="name">hr</span>&gt;</span> <span class="tag">&lt;<span class="name">img</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span>&gt;</span> <span class="tag">&lt;<span class="name">link</span>&gt;</span> <span class="tag">&lt;<span class="name">meta</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>鲜为人知的是：</p>
-<p>```html</p>
-<p><area> <base> <col> <command> <embed> <keygen> <param> <source> <track> <wbr><br>`</p>
-<ul>
-<li>页面导入样式时，使用link和@import有什么区别？</li>
-</ul>
-<p>（1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;</p>
-<p>（2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</p>
-<p>（3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</p>
-<ul>
-<li>介绍一下你对浏览器内核的理解？</li>
-</ul>
-<p>主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。<br>渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。</p>
-<p>JS引擎则：解析和执行javascript来实现网页的动态效果。</p>
-<p>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</p>
-<ul>
-<li>常见的浏览器内核有哪些？</li>
-</ul>
-<p>Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]<br>Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等<br>Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]<br>Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]</p>
-<pre><code>详细文章：[浏览器内核的解析和对比](http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html)
-</code></pre><ul>
-<li>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和<br>HTML5？</li>
-</ul>
-<pre><code>* HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
-      绘画 canvas;
-      用于媒介回放的 video 和 audio 元素;
-      本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;
-      sessionStorage 的数据在浏览器关闭后自动删除;
-      语意化更好的内容元素，比如 article、footer、header、nav、section;
-      表单控件，calendar、date、time、email、url、search;
-      新的技术webworker, websocket, Geolocation;
-
-  移除的元素：
-      纯表现的元素：basefont，big，center，font, s，strike，tt，u;
-      对可用性产生负面影响的元素：frame，frameset，noframes；
-
-* 支持HTML5新标签：
-     IE8/IE7/IE6支持通过document.createElement方法产生的标签，
-       可以利用这一特性让这些浏览器支持HTML5新标签，
-       浏览器支持新标签后，还需要添加标签默认的样式。
-
-     当然也可以直接使用成熟的框架、比如html5shim;
-     &lt;!--[if lt IE 9]&gt;
-        &lt;script&gt; src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&lt;/script&gt;
-     &lt;![endif]--&gt;
-
-* 如何区分HTML5： DOCTYPE声明\新增的结构元素\功能元素
-</code></pre><ul>
-<li><p>简述一下你对HTML语义化的理解？</p>
-<pre><code>用正确的标签做正确的事情。
-html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;
-即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;
-搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;
-使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
-</code></pre></li>
-</ul>
-<ul>
-<li><p>HTML5的离线储存怎么使用，工作原理能不能解释一下？</p>
-<pre><code>在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。
-原理：HTML5的离线存储是基于一个新建的.appcache文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。
-</code></pre></li>
-</ul>
-<pre><code>    如何使用：
-    1、页面头部像下面一样加入一个manifest的属性；
-    2、在cache.manifest文件的编写离线存储的资源；
-        CACHE MANIFEST
-        #v0.11
-        CACHE:
-        js/app.js
-        css/style.css
-        NETWORK:
-        resourse/logo.png
-        FALLBACK:
-        / /offline.html
-    3、在离线状态时，操作window.applicationCache进行需求实现。
-
-详细的使用请参考：[有趣的HTML5：离线存储](http://segmentfault.com/a/1190000000732617)
-</code></pre><ul>
-<li><p>浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">area</span>&gt;</span> <span class="tag">&lt;<span class="name">base</span>&gt;</span> <span class="tag">&lt;<span class="name">col</span>&gt;</span> <span class="tag">&lt;<span class="name">command</span>&gt;</span> <span class="tag">&lt;<span class="name">embed</span>&gt;</span> <span class="tag">&lt;<span class="name">keygen</span>&gt;</span> <span class="tag">&lt;<span class="name">param</span>&gt;</span> <span class="tag">&lt;<span class="name">source</span>&gt;</span> <span class="tag">&lt;<span class="name">track</span>&gt;</span> <span class="tag">&lt;<span class="name">wbr</span>&gt;</span></span><br><span class="line">`</span><br><span class="line"></span><br><span class="line">- 页面导入样式时，使用link和@import有什么区别？</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">（1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;</span><br><span class="line"></span><br><span class="line">（2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</span><br><span class="line"></span><br><span class="line">（3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 介绍一下你对浏览器内核的理解？</span><br><span class="line"></span><br><span class="line">主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。</span><br><span class="line">渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。</span><br><span class="line"></span><br><span class="line">JS引擎则：解析和执行javascript来实现网页的动态效果。</span><br><span class="line"></span><br><span class="line">最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</span><br><span class="line"></span><br><span class="line">- 常见的浏览器内核有哪些？</span><br><span class="line"></span><br><span class="line">Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]</span><br><span class="line">Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等</span><br><span class="line">Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]</span><br><span class="line">Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]</span><br><span class="line"></span><br><span class="line">      详细文章：[浏览器内核的解析和对比](http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和</span><br><span class="line">HTML5？</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		* HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。</span><br><span class="line">			  绘画 canvas;</span><br><span class="line">			  用于媒介回放的 video 和 audio 元素;</span><br><span class="line">			  本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;</span><br><span class="line">	          sessionStorage 的数据在浏览器关闭后自动删除;</span><br><span class="line">			  语意化更好的内容元素，比如 article、footer、header、nav、section;</span><br><span class="line">			  表单控件，calendar、date、time、email、url、search;</span><br><span class="line">			  新的技术webworker, websocket, Geolocation;</span><br><span class="line"></span><br><span class="line">		  移除的元素：</span><br><span class="line">			  纯表现的元素：basefont，big，center，font, s，strike，tt，u;</span><br><span class="line">			  对可用性产生负面影响的元素：frame，frameset，noframes；</span><br><span class="line"></span><br><span class="line">	    * 支持HTML5新标签：</span><br><span class="line">			 IE8/IE7/IE6支持通过document.createElement方法产生的标签，</span><br><span class="line">		  	 可以利用这一特性让这些浏览器支持HTML5新标签，</span><br><span class="line">          	 浏览器支持新标签后，还需要添加标签默认的样式。</span><br><span class="line"></span><br><span class="line">		     当然也可以直接使用成熟的框架、比如html5shim;</span><br><span class="line">			 <span class="comment">&lt;!--[if lt IE 9]&gt;</span><br><span class="line">				&lt;script&gt; src="http://html5shim.googlecode.com/svn/trunk/html5.js"&lt;/script&gt;</span><br><span class="line">			 &lt;![endif]--&gt;</span></span><br><span class="line"></span><br><span class="line">		* 如何区分HTML5： DOCTYPE声明\新增的结构元素\功能元素</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 简述一下你对HTML语义化的理解？</span><br><span class="line"></span><br><span class="line">用正确的标签做正确的事情。</span><br></pre></td></tr></table></figure>
+<p>html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;<br>即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;<br>搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;<br>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">- HTML5的离线储存怎么使用，工作原理能不能解释一下？</span><br></pre></td></tr></table></figure></p>
+<p>在用户没有与因特网连接时，可以正常访问站点或应用，在用户与因特网连接时，更新用户机器上的缓存文件。<br>原理：HTML5的离线存储是基于一个新建的.appcache文件的缓存机制(不是存储技术)，通过这个文件上的解析清单离线存储资源，这些资源就会像cookie一样被存储了下来。之后当网络在处于离线状态下时，浏览器会通过被离线存储的数据进行页面展示。</p>
+<p>如何使用：<br>1、页面头部像下面一样加入一个manifest的属性；<br>2、在cache.manifest文件的编写离线存储的资源；<br>    CACHE MANIFEST</p>
+<pre><code>#v0.11
+CACHE:
+js/app.js
+css/style.css
+NETWORK:
+resourse/logo.png
+FALLBACK:
+/ /offline.html
+</code></pre><p>3、在离线状态时，操作window.applicationCache进行需求实现。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">详细的使用请参考：[有趣的HTML5：离线存储](http://segmentfault.com/a/1190000000732617)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</span><br></pre></td></tr></table></figure></p>
 <pre><code>在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。
 离线的情况下，浏览器就直接使用离线存储的资源。
-</code></pre><p>  详细的使用请参考：<a href="http://segmentfault.com/a/1190000000732617" target="_blank" rel="external">有趣的HTML5：离线存储</a></p>
-</li>
-<li><p>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</p>
-<pre><code>cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。
-cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。
-sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
-
-存储大小：
-    cookie数据大小不能超过4k。
-    sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。
-
-有期时间：
-    localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；
-    sessionStorage  数据在当前浏览器窗口关闭后自动删除。
-    cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
-</code></pre></li>
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">详细的使用请参考：[有趣的HTML5：离线存储](http://segmentfault.com/a/1190000000732617)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 请描述一下 cookies，sessionStorage 和 localStorage 的区别？</span><br></pre></td></tr></table></figure>
+<p>cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。<br>cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。<br>sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。</p>
+<p>存储大小：<br>    cookie数据大小不能超过4k。<br>    sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</p>
+<p>有期时间：<br>       localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；<br>          sessionStorage  数据在当前浏览器窗口关闭后自动删除。<br>    cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭<br>```</p>
+<ul>
 <li><p>iframe有那些缺点？</p>
 <pre><code>*iframe会阻塞主页面的Onload事件；
 *搜索引擎的检索程序无法解读这种页面，不利于SEO;
