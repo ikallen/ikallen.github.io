@@ -4,17 +4,32 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hexo</title>
+  <title>前端开发面试题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="a web for develop">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="#前端开发面试题
+前言只看问题点这里 
+看全部问题和答案点这里
+本文由我收集总结了一些前端面试题，初学者阅后也要用心钻研其中的原理，重要知识需要系统学习、透彻学习，形成自己的知识链。万不可投机取巧，临时抱佛脚只求面试侥幸混过关是错误的！也是不可能的！不可能的！不可能的！
+前端还是一个年轻的行业，新的行业标准， 框架， 库都不断在更新和新增，正如赫门在2015深JS大会上的《前端服务化之路》主题演讲">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端开发面试题">
+<meta property="og:url" content="http://yoursite.com/2016/06/05/Html5-A&Q/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="a web for develop">
+<meta property="og:description" content="#前端开发面试题
+前言只看问题点这里 
+看全部问题和答案点这里
+本文由我收集总结了一些前端面试题，初学者阅后也要用心钻研其中的原理，重要知识需要系统学习、透彻学习，形成自己的知识链。万不可投机取巧，临时抱佛脚只求面试侥幸混过关是错误的！也是不可能的！不可能的！不可能的！
+前端还是一个年轻的行业，新的行业标准， 框架， 库都不断在更新和新增，正如赫门在2015深JS大会上的《前端服务化之路》主题演讲">
+<meta property="og:image" content="http://www.w3school.com.cn/i/ct_js_value.gif">
+<meta property="og:updated_time" content="2016-07-07T07:11:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="a web for develop">
+<meta name="twitter:title" content="前端开发面试题">
+<meta name="twitter:description" content="#前端开发面试题
+前言只看问题点这里 
+看全部问题和答案点这里
+本文由我收集总结了一些前端面试题，初学者阅后也要用心钻研其中的原理，重要知识需要系统学习、透彻学习，形成自己的知识链。万不可投机取巧，临时抱佛脚只求面试侥幸混过关是错误的！也是不可能的！不可能的！不可能的！
+前端还是一个年轻的行业，新的行业标准， 框架， 库都不断在更新和新增，正如赫门在2015深JS大会上的《前端服务化之路》主题演讲">
+<meta name="twitter:image" content="http://www.w3school.com.cn/i/ct_js_value.gif">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -175,229 +190,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-Html5-FileReader" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/05/Html5-FileReader/" class="article-date">
-  	<time datetime="2016-07-05T04:23:30.000Z" itemprop="datePublished">2016-07-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/05/Html5-FileReader/">FileReader</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Web API</p>
-<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader</a></li>
-</ul>
-<h2 id="FileReader"><a href="#FileReader" class="headerlink" title="FileReader"></a>FileReader</h2><p>使用FileReader对象,web应用程序可以异步的读取存储在用户计算机上的文件(或者原始数据缓冲)内容,可以使用File对象或者Blob对象来指定所要处理的文件或数据.其中File对象可以是来自用户在一个input元素上选择文件后返回的FileList对象,也可以来自拖放操作生成的 DataTransfer对象,还可以是来自在一个HTMLCanvasElement上执行GetAsFile()方法后的返回结果.</p>
-<h3 id="创建一个对象"><a href="#创建一个对象" class="headerlink" title="创建一个对象"></a>创建一个对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</span><br></pre></td></tr></table></figure>
-<h3 id="读取一个文件"><a href="#读取一个文件" class="headerlink" title="读取一个文件"></a>读取一个文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="comment">// input `type = file`</span></span><br><span class="line">	<span class="keyword">var</span> oIcon = <span class="built_in">document</span>.getElementById(<span class="string">'icon'</span>);</span><br><span class="line">	<span class="comment">// img tag to show selected image</span></span><br><span class="line">	<span class="keyword">var</span> oShow = <span class="built_in">document</span>.getElementById(<span class="string">'show'</span>);</span><br><span class="line"></span><br><span class="line">	oIcon.onchange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> file = <span class="keyword">this</span>.files[<span class="number">0</span>];</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</span><br><span class="line">		reader.readAsDataURL(file);</span><br><span class="line">		reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">			<span class="comment">// base64</span></span><br><span class="line">			<span class="comment">// console.log(this.result);</span></span><br><span class="line">			</span><br><span class="line">			oShow.src = <span class="keyword">this</span>.result;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/File-Upload/">File Upload</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FileReader/">FileReader</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Html5/">Html5</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Html5-React入门" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/05/Html5-React入门/" class="article-date">
-  	<time datetime="2016-06-05T04:23:30.000Z" itemprop="datePublished">2016-06-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/05/Html5-React入门/">React入门</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什么是React？"><a href="#什么是React？" class="headerlink" title="什么是React？"></a>什么是React？</h2><blockquote>
-<p>FaceBook总是喜欢创造新东西！React 让我想起当年的320！</p>
-</blockquote>
-<p>伴随着H5的火热，市场上的前端框架越来越多，其中最近有代表性的就是AngularJS和React。FaceBook内部开发人员感觉市场上的前端框架不能满足自己，于是自己搞了一套自己的前端框架，命名为React，并与2013年5月开源公布。</p>
-<p>##为什么会出现前端框架？<br>做过后台的都知道，如果我们要把后台的数据显示到前台，其实会经历很多波折的！先从数据库中把数据获取到，解析到泛型List中，用后台代码遍历数据并嵌入到Html中执行，融入逻辑后显示在Html结构中。这个过程如果我们每次都按照原始方法做，浪费时间而且及容易出错。我们把这个问题总结下，其实这就是个MVC问题。故此，前端出现了很多有名的MVC框架，Backbone、Angular等。但最近以React最火，React不仅解决了前端的问题，而且解决了移动手持设备的问题，至少，我们以后发布AppStore审核的App不用等2周时间，也不用必须会Obj-C、Swift才能做iOS、更不用Java来做Android，融入NodeJS后，这才是真正意义的全栈开发！</p>
-<h2 id="牛刀小试"><a href="#牛刀小试" class="headerlink" title="牛刀小试"></a>牛刀小试</h2><p>学习React框架要用到两个js框架，一个是React.js，另一个是JSXTransformer.js。前者不多说，后者是把JSX转化成JS的转化器。<br>因为我们用React.js的时候最好配合JSX（语法见后续）。</p>
-<h3 id="1、Html模板"><a href="#1、Html模板" class="headerlink" title="1、Html模板"></a>1、Html模板</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../build/react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../build/JSXTransformer.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/jsx"</span>&gt;</span><span class="javascript"></span><br><span class="line">      <span class="comment">// ** code start... **</span></span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="2、一个简单的例子"><a href="#2、一个简单的例子" class="headerlink" title="2、一个简单的例子"></a>2、一个简单的例子</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../build/react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../build/JSXTransformer.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"outer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/jsx"</span>&gt;</span><span class="javascript"></span><br><span class="line">      React.render(</span><br><span class="line">        React.createElement(<span class="string">'div'</span>,<span class="literal">null</span>,<span class="string">'i am kallen!'</span>),</span><br><span class="line">        <span class="built_in">document</span>.getElementById(<span class="string">'outer'</span>)</span><br><span class="line">      );</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>其中，React.render()是React框架最常用的函数，主要用来呈现或者渲染视图。语法如下：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ReactComponent render(</span><br><span class="line">  ReactElement element,</span><br><span class="line">  DOMElement container,</span><br><span class="line">  [<span class="function"><span class="keyword">function</span> <span class="title">callback</span>]</span><br><span class="line">)</span></span><br></pre></td></tr></table></figure>
-<p>ReactElement 是React中的类型，DOMElement是原型Js中的类型，第三个参数是可选回调函数。函数作用是把React创建的ReactElement对象添加到DOMElement对象中作为子结点，如果提供回调函数，添加成功后（也有可能是更新）执行回调函数。</p>
-<p>Chrome截图如下：其中data-reactid=”.0”是React框架自动生成的，为以后拓展使用。<br><img src="./img/React.render.png" alt="render" title="render"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Html5/">Html5</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-visual_format_content" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/05/visual_format_content/" class="article-date">
-  	<time datetime="2016-06-05T04:23:30.000Z" itemprop="datePublished">2016-06-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/05/visual_format_content/">Visual Format Content</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>翻译至：</p>
-<ul>
-<li><a href="http://www.w3.org/TR/CSS2/visuren.html#box-gen" target="_blank" rel="external">http://www.w3.org/TR/CSS2/visuren.html#box-gen</a></li>
-<li><a href="https://www.w3.org/TR/CSS2/visuren.html#block-boxes" target="_blank" rel="external">https://www.w3.org/TR/CSS2/visuren.html#block-boxes</a></li>
-</ul>
-<h2 id="块元素和块盒"><a href="#块元素和块盒" class="headerlink" title="块元素和块盒"></a>块元素和块盒</h2><h3 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h3><blockquote>
-<p>Block-level elements are those elements of the source document that are formatted visually as blocks (e.g., paragraphs). The following values of the ‘display’ property make an element block-level: ‘block’, ‘list-item’, and ‘table’.</p>
-</blockquote>
-<p>块元素（Block-level elements）是文档元素被格式化为可见的块，例如P标签。display的block、list-item、table都可以让一个元素成为块元素</p>
-<blockquote>
-<p>Block-level boxes are boxes that participate in a block formatting context. Each block-level element generates a principal block-level box that contains descendant boxes and generated content and is also the box involved in any positioning scheme. Some block-level elements may generate additional boxes in addition to the principal box: ‘list-item’ elements. These additional boxes are placed with respect to the principal box.</p>
-</blockquote>
-<p>块级盒子是主要的box参与BFC。每个块级元素生成一个重要的块级盒子（block-level box）包含后续盒子和生成的内容也是一个包含定位模式（positioning scheme）的盒子。除了主要的盒子，一些块元素也生成额外的盒子：一些 list-item 元素。这些额外的盒子是被放置到主盒子中。</p>
-<blockquote>
-<p>Except for table boxes, which are described in a later chapter, and replaced elements, a block-level box is also a block container box. A block container box either contains only block-level boxes or establishes an inline formatting context and thus contains only inline-level boxes. Not all block container boxes are block-level boxes: non-replaced inline blocks and non-replaced table cells are block containers but not block-level boxes. Block-level boxes that are also block containers are called block boxes.</p>
-</blockquote>
-<p>除了后续章节会提到 表盒子（table boxes）和可替代元素（replaced elements），块级盒子也是一个块容器盒。块容器盒要么只包含块级盒要么生成一个只包含行级盒的IFC。不是所有的块容器盒都是块级盒：不可代替的行（内）块和不可取代的table cell是块容器但是不是块级盒。<br>是块容器（block containers）的块级盒子（Block-level boxes）我们称之为块盒（block boxes）</p>
-<blockquote>
-<p>The three terms “block-level box,” “block container box,” and “block box” are sometimes abbreviated as “block” where unambiguous.</p>
-</blockquote>
-<p>block-level box、block container box、block box这三个术语，我们有时明确地简称为”block”。</p>
-<h3 id="匿名块盒"><a href="#匿名块盒" class="headerlink" title="匿名块盒"></a>匿名块盒</h3>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VFC/">VFC</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Html5/">Html5</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Html5-A&amp;Q" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Html5-A&amp;Q" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/06/05/Html5-A&Q/" class="article-date">
@@ -413,12 +206,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/05/Html5-A&Q/">前端开发面试题</a>
+    <h1 class="article-title" itemprop="name">
+      前端开发面试题
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发面试题/">前端开发面试题</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Html5/">Html5</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -2094,37 +1902,72 @@ JS 分文件夹存放 命名以该JS功能为准的英文翻译。
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发面试题/">前端开发面试题</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Html5/">Html5</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/06/05/visual_format_content/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Visual Format Content
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
 
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Html5-A&amp;Q" data-title="前端开发面试题" data-url="http://yoursite.com/2016/06/05/Html5-A&amp;Q/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-  
-  
+
+
+
 </div>
       <footer id="footer">
   <div class="outer">
@@ -2148,8 +1991,8 @@ JS 分文件夹存放 命名以该JS功能为准的英文翻译。
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
