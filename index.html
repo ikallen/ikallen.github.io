@@ -109,7 +109,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Atom/" style="font-size: 10px;">Atom</a> <a href="/tags/File-Upload/" style="font-size: 10px;">File Upload</a> <a href="/tags/FileReader/" style="font-size: 10px;">FileReader</a> <a href="/tags/Mac系统/" style="font-size: 10px;">Mac系统</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/SASS/" style="font-size: 10px;">SASS</a> <a href="/tags/Sublime-Channels/" style="font-size: 10px;">Sublime-Channels</a> <a href="/tags/Sublime3/" style="font-size: 10px;">Sublime3</a> <a href="/tags/VFC/" style="font-size: 10px;">VFC</a> <a href="/tags/node/" style="font-size: 10px;">node</a>
+						<a href="/tags/Atom/" style="font-size: 10px;">Atom</a> <a href="/tags/File-Upload/" style="font-size: 10px;">File Upload</a> <a href="/tags/FileReader/" style="font-size: 10px;">FileReader</a> <a href="/tags/Mac系统/" style="font-size: 10px;">Mac系统</a> <a href="/tags/React/" style="font-size: 10px;">React</a> <a href="/tags/SASS/" style="font-size: 10px;">SASS</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/Sublime-Channels/" style="font-size: 10px;">Sublime-Channels</a> <a href="/tags/Sublime3/" style="font-size: 10px;">Sublime3</a> <a href="/tags/VFC/" style="font-size: 10px;">VFC</a> <a href="/tags/node/" style="font-size: 10px;">node</a>
 					</div>
 				</section>
 				
@@ -176,6 +176,95 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Java-SSH-整合" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/05/Java-SSH-整合/" class="article-date">
+  	<time datetime="2017-03-05T07:17:11.000Z" itemprop="datePublished">2017-03-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/05/Java-SSH-整合/">Java SSH 整合</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="&#x4E00;-&#x73AF;&#x5883;"><a href="#&#x4E00;-&#x73AF;&#x5883;" class="headerlink" title="&#x4E00;.&#x73AF;&#x5883;"></a>&#x4E00;.&#x73AF;&#x5883;</h2><h3 id="&#x914D;&#x7F6E;&#x76F8;&#x5173;"><a href="#&#x914D;&#x7F6E;&#x76F8;&#x5173;" class="headerlink" title="&#x914D;&#x7F6E;&#x76F8;&#x5173;"></a>&#x914D;&#x7F6E;&#x76F8;&#x5173;</h3><ul>
+<li>Mac OS X 10.12 macOS Sierra</li>
+<li>JDK 1.7.0_79</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">java version &quot;1.7.0_79&quot;</div><div class="line">Java(TM) SE Runtime Environment (build 1.7.0_79-b15)</div><div class="line">Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode)</div></pre></td></tr></table></figure>
+<ul>
+<li>SSH &#x7248;&#x672C;<br>struts-2.3.31-all<br>spring-framework-3.2.0.RELEASE<br>hibernate-distribution-3.6.10.Final</li>
+</ul>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x9009;&#x62E9;&#x6700;&#x65B0;&#x7684;jdk1.8,&#x540C;&#x65F6;&#x628A;SSH&#x5404;&#x4E2A;&#x7248;&#x672C;&#x5347;&#x7EA7;&#x5230;&#x6700;&#x65B0;&#x3002;</p>
+<ul>
+<li>Eclipse &#x7248;&#x672C;<br>Eclipse Java EE IDE for Web Developers.<br>Version: Luna Service Release 2 (4.4.2)<br>Build id: 20150219-0600</li>
+</ul>
+<h2 id="&#x4E8C;-&#x521B;&#x5EFA;Web&#x9879;&#x76EE;"><a href="#&#x4E8C;-&#x521B;&#x5EFA;Web&#x9879;&#x76EE;" class="headerlink" title="&#x4E8C;.&#x521B;&#x5EFA;Web&#x9879;&#x76EE;"></a>&#x4E8C;.&#x521B;&#x5EFA;Web&#x9879;&#x76EE;</h2><h3 id="1-&#x521B;&#x5EFA;&#x4E00;&#x4E2A;web&#x9879;&#x76EE;-Eclipse-EE-&#x7248;"><a href="#1-&#x521B;&#x5EFA;&#x4E00;&#x4E2A;web&#x9879;&#x76EE;-Eclipse-EE-&#x7248;" class="headerlink" title="1.&#x521B;&#x5EFA;&#x4E00;&#x4E2A;web&#x9879;&#x76EE;(Eclipse EE &#x7248;)"></a>1.&#x521B;&#x5EFA;&#x4E00;&#x4E2A;web&#x9879;&#x76EE;(Eclipse EE &#x7248;)</h3><p>&#x5982;&#x56FE;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Web&#x5DE5;&#x7A0B;&#xFF0C;&#x547D;&#x540D;&#x4E3A;S2SH&#x3002;<br><img src="/2017/03/05/Java-SSH-&#x6574;&#x5408;/create-web-project.png" alt="create-web-project"></p>
+<h3 id="2-&#x5BFC;&#x5165;Structs2&#x4E2D;&#x7684;&#x5305;"><a href="#2-&#x5BFC;&#x5165;Structs2&#x4E2D;&#x7684;&#x5305;" class="headerlink" title="2.&#x5BFC;&#x5165;Structs2&#x4E2D;&#x7684;&#x5305;"></a>2.&#x5BFC;&#x5165;Structs2&#x4E2D;&#x7684;&#x5305;</h3><p>&#x89E3;&#x538B;struts-2.3.31-all.zip&#x5F97;&#x5230;&#x4EE5;&#x4E0B;&#x76EE;&#x5F55;<br><img src="/2017/03/05/Java-SSH-&#x6574;&#x5408;/struts-2.3.31-all.png" alt="struts-2.3.31-all"><br>struts2-blank.war &#x662F;structs2-blank&#x7684;&#x7A7A;&#x5DE5;&#x7A0B;&#xFF0C;&#x89E3;&#x538B;&#x3002;copy WEB-INF/lib/&#x4E0B;&#x7684;&#x6240;&#x6709;jar&#x5305;&#x3002;<br><img src="/2017/03/05/Java-SSH-&#x6574;&#x5408;/structs2-jar.png" alt="structs2-jar"><br>&#x5C06;copy&#x7684;&#x6240;&#x6709;&#x5305;&#x653E;&#x5230;S2SH&#x5DE5;&#x7A0B;&#x4E2D;WEB-INF/lib/&#x4E0B;&#x3002;&#x5982;&#x4E0B;&#x56FE;<br><img src="/2017/03/05/Java-SSH-&#x6574;&#x5408;/s2sh-1.png" alt="s2sh"></p>
+<h3 id="3-&#x4FEE;&#x6539;web-xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a href="#3-&#x4FEE;&#x6539;web-xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="headerlink" title="3.&#x4FEE;&#x6539;web.xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;"></a>3.&#x4FEE;&#x6539;web.xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3><p>&#x5728;WEB-INF/&#x4E0B;&#x6DFB;&#x52A0;web.xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span><span class="meta">?&gt;</span></span>  </div><div class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://java.sun.com/xml/ns/javaee&quot;</span> <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot;</span> <span class="attr">id</span>=<span class="string">&quot;WebApp_ID&quot;</span> <span class="attr">version</span>=<span class="string">&quot;3.0&quot;</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">display-name</span>&gt;</span>ssh<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">welcome-file-list</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>index.html<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>index.htm<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>index.jsp<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>default.html<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>default.htm<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>default.jsp<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">welcome-file-list</span>&gt;</span>  </div><div class="line">  <span class="comment">&lt;!-- &#x914D;&#x7F6E;struts2&#x6838;&#x5FC3;&#x8FC7;&#x6EE4;&#x5668; --&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">filter</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">filter</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="4-&#x6DFB;&#x52A0;struts-xml&#x6587;&#x4EF6;"><a href="#4-&#x6DFB;&#x52A0;struts-xml&#x6587;&#x4EF6;" class="headerlink" title="4.&#x6DFB;&#x52A0;struts.xml&#x6587;&#x4EF6;"></a>4.&#x6DFB;&#x52A0;struts.xml&#x6587;&#x4EF6;</h3><p>&#x5728;src&#x4E2D;&#x6DFB;&#x52A0;<code>struts.xml</code> &#x6587;&#x4EF6;</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> <span class="meta">?&gt;</span></span></div><div class="line"><span class="meta">&lt;!DOCTYPE struts PUBLIC</span></div><div class="line">	&quot;-//Apache Software Foundation//DTD Struts Configuration 2.3//EN&quot;</div><div class="line">	&quot;http://struts.apache.org/dtds/struts-2.3.dtd&quot;&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">struts</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">&quot;struts.enable.DynamicMethodInvocation&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">constant</span> <span class="attr">name</span>=<span class="string">&quot;struts.devMode&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">&quot;default&quot;</span> <span class="attr">namespace</span>=<span class="string">&quot;/&quot;</span> <span class="attr">extends</span>=<span class="string">&quot;struts-default&quot;</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">&quot;login&quot;</span>  <span class="attr">class</span>=<span class="string">&quot;com.kallen.ssh.action.LoginAction&quot;</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">&quot;success&quot;</span>&gt;</span>/WEB-INF/success.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">result</span> <span class="attr">name</span>=<span class="string">&quot;error&quot;</span>&gt;</span>/WEB-INF/error.jsp<span class="tag">&lt;/<span class="name">result</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">action</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">package</span>&gt;</span></div><div class="line">    </div><div class="line"><span class="tag">&lt;/<span class="name">struts</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="5-&#x5BFC;&#x5165;spring&#x7684;jar&#x5305;"><a href="#5-&#x5BFC;&#x5165;spring&#x7684;jar&#x5305;" class="headerlink" title="5.&#x5BFC;&#x5165;spring&#x7684;jar&#x5305;"></a>5.&#x5BFC;&#x5165;spring&#x7684;jar&#x5305;</h3><p>&#x5BFC;&#x5165;    <code>spring-framework-3.2.0.RELEASE</code>&#x4E2D;&#x6240;&#x6709;*.RELEASE.jar &#x5305;<br>&#x5BFC;&#x5165;&#x540E;&#x5982;&#x56FE;&#xFF0C;&#x5176;&#x4E2D;&#x9009;&#x62E9;&#x7684;&#x90E8;&#x5206;&#x662F;&#x4E0D;&#x5FC5;&#x8981;&#x7684;jar&#x5305;&#xFF0C;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x3002;<br><img src="/2017/03/05/Java-SSH-&#x6574;&#x5408;/spring.png" alt="spring"></p>
+<p>&#x4E3A;&#x4E86;&#x6574;&#x5408;&#x9700;&#x8981;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;<code>struts2-spring-plugin-2.3.31.jar</code> &#x5728;struts-2.3.31/lib&#x4E2D;&#x3002;<br>&#x540C;&#x65F6;&#x8981;&#x4FEE;&#x6539;web.xml&#x6587;&#x4EF6;&#x3002;</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span><span class="meta">?&gt;</span></span>  </div><div class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://java.sun.com/xml/ns/javaee&quot;</span> <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot;</span> <span class="attr">id</span>=<span class="string">&quot;WebApp_ID&quot;</span> <span class="attr">version</span>=<span class="string">&quot;3.0&quot;</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">display-name</span>&gt;</span>ssh<span class="tag">&lt;/<span class="name">display-name</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">welcome-file-list</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>index.html<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>index.htm<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>index.jsp<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>default.html<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>default.htm<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">welcome-file</span>&gt;</span>default.jsp<span class="tag">&lt;/<span class="name">welcome-file</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">welcome-file-list</span>&gt;</span>  </div><div class="line">  <span class="comment">&lt;!-- &#x914D;&#x7F6E;struts2&#x6838;&#x5FC3;&#x8FC7;&#x6EE4;&#x5668; --&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">filter</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">filter</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>struts2<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span>  </div><div class="line">  <span class="comment">&lt;!-- &#x544A;&#x8BC9;spring&#x5BB9;&#x5668;spring&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E; --&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">context-param</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:applicationContext.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">context-param</span>&gt;</span>  </div><div class="line">  <span class="comment">&lt;!-- &#x914D;&#x7F6E;&#x76D1;&#x542C; --&gt;</span>  </div><div class="line">  <span class="tag">&lt;<span class="name">listener</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>org.springframework.web.context.ContextLoaderListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span>  </div><div class="line">  <span class="tag">&lt;/<span class="name">listener</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="6-&#x589E;&#x52A0;applicationContext-xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a href="#6-&#x589E;&#x52A0;applicationContext-xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="headerlink" title="6.&#x589E;&#x52A0;applicationContext.xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;"></a>6.&#x589E;&#x52A0;applicationContext.xml&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3><p>&#x5728;&#x5DE5;&#x7A0B;&#x7684;src&#x4E2D;&#x6DFB;&#x52A0;<code>applicationContext.xml</code>&#x914D;&#x7F6E;&#x6587;&#x4EF6;,&#x914D;&#x7F6E;&#x5148;&#x5173;&#x7684;bean&#x4EE5;&#x53CA;&#x4F9D;&#x8D56;&#x3002;</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span><span class="meta">?&gt;</span></span>  </div><div class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span>  </span></div><div class="line">    <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>   </div><div class="line">    <span class="attr">xmlns:context</span>=<span class="string">&quot;http://www.springframework.org/schema/context&quot;</span>  </div><div class="line">    <span class="attr">xmlns:aop</span>=<span class="string">&quot;http://www.springframework.org/schema/aop&quot;</span>  </div><div class="line">    <span class="attr">xmlns:tx</span>=<span class="string">&quot;http://www.springframework.org/schema/tx&quot;</span>  </div><div class="line">    <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;  </span></div><div class="line">            http://www.springframework.org/schema/beans  </div><div class="line">            http://www.springframework.org/schema/beans/spring-beans.xsd  </div><div class="line">            http://www.springframework.org/schema/context  </div><div class="line">            http://www.springframework.org/schema/context/spring-context.xsd  </div><div class="line">            http://www.springframework.org/schema/aop  </div><div class="line">            http://www.springframework.org/schema/aop/spring-aop.xsd  </div><div class="line">            http://www.springframework.org/schema/tx  </div><div class="line">            http://www.springframework.org/schema/tx/spring-tx.xsd&quot;&gt;</div><div class="line">            </div><div class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>&#x73B0;&#x5728;applicationContext.xml&#x6587;&#x4EF6;&#x4E2D;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x4EFB;&#x4F55;bean&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x5BFC;&#x5165;hibernate&#x7684;jar&#x5305;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;</p>
+<h3 id="7-&#x6574;&#x5408;hibernate"><a href="#7-&#x6574;&#x5408;hibernate" class="headerlink" title="7.&#x6574;&#x5408;hibernate"></a>7.&#x6574;&#x5408;hibernate</h3><p>&#x5728;<code>hibernate-distribution-3.6.10.Final</code>&#x4E0B;&#x627E;&#x5230;lib&#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x56FE;&#xFF0C;&#x5176;&#x4E2D;required&#x76EE;&#x5F55;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x5305;&#xFF0C;optional&#x662F;&#x53EF;&#x9009;&#x7684;&#x5305;&#x3002;<br><img src="/2017/03/05/Java-SSH-&#x6574;&#x5408;/hibernate.png" alt="hibernate"><br>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;javassist-3.12.0.GA.jar&#x8FD9;&#x4E2A;jar&#x5305;&#x4E0D;&#x7528;&#x52A0;&#xFF0C;&#x524D;&#x9762;&#x5728;&#x6DFB;&#x52A0;structs&#x4E2D;&#x6DFB;&#x52A0;&#x8FC7;&#x3002;&#x5982;&#x679C;&#x8981;&#x7528;&#x7684;&#x6CE8;&#x89E3;&#x7684;&#x8BDD;&#x8FD8;&#x8981;&#x5BFC;&#x5165;hibernate-jpa-2.0-api-1.0.1.Final.jar</p>
+<h3 id="8-mysql&#x6570;&#x636E;&#x5E93;&#x9A71;&#x52A8;"><a href="#8-mysql&#x6570;&#x636E;&#x5E93;&#x9A71;&#x52A8;" class="headerlink" title="8.mysql&#x6570;&#x636E;&#x5E93;&#x9A71;&#x52A8;"></a>8.mysql&#x6570;&#x636E;&#x5E93;&#x9A71;&#x52A8;</h3><p>&#x5982;&#x679C;&#x8981;&#x8FDE;&#x63A5;mysql&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x6DFB;&#x52A0;mysql-connector-java-commercial-5.1.25-bin.jar&#x5305;&#x3002;<br><a href="https://dev.mysql.com/downloads/connector/" target="_blank" rel="external">mysql&#x9A71;&#x52A8;</a></p>
+<h3 id="9-&#x5176;&#x4ED6;jar&#x5305;"><a href="#9-&#x5176;&#x4ED6;jar&#x5305;" class="headerlink" title="9.&#x5176;&#x4ED6;jar&#x5305;"></a>9.&#x5176;&#x4ED6;jar&#x5305;</h3><ul>
+<li>&#x9879;&#x76EE;&#x53EF;&#x80FD;&#x8981;&#x7528;&#x5230;ajax&#x524D;&#x540E;&#x53F0;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x2014;json&#x683C;&#x5F0F;&#xFF0C;&#x8981;&#x52A0;&#x5165;<code>struts2-json-plugin-2.3.7.jar</code></li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/">SSH</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Java/">Java</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Mac-Finder中查看隐藏文件" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -739,87 +828,10 @@
 
 
   
-    <article id="post-visual_format_content" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/06/05/visual_format_content/" class="article-date">
-  	<time datetime="2016-06-05T04:23:30.000Z" itemprop="datePublished">2016-06-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/05/visual_format_content/">Visual Format Content</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x7FFB;&#x8BD1;&#x81F3;&#xFF1A;</p>
-<ul>
-<li><a href="http://www.w3.org/TR/CSS2/visuren.html#box-gen" target="_blank" rel="external">http://www.w3.org/TR/CSS2/visuren.html#box-gen</a></li>
-<li><a href="https://www.w3.org/TR/CSS2/visuren.html#block-boxes" target="_blank" rel="external">https://www.w3.org/TR/CSS2/visuren.html#block-boxes</a></li>
-</ul>
-<h2 id="&#x5757;&#x5143;&#x7D20;&#x548C;&#x5757;&#x76D2;"><a href="#&#x5757;&#x5143;&#x7D20;&#x548C;&#x5757;&#x76D2;" class="headerlink" title="&#x5757;&#x5143;&#x7D20;&#x548C;&#x5757;&#x76D2;"></a>&#x5757;&#x5143;&#x7D20;&#x548C;&#x5757;&#x76D2;</h2><h3 id="&#x5757;&#x5143;&#x7D20;"><a href="#&#x5757;&#x5143;&#x7D20;" class="headerlink" title="&#x5757;&#x5143;&#x7D20;"></a>&#x5757;&#x5143;&#x7D20;</h3><blockquote>
-<p>Block-level elements are those elements of the source document that are formatted visually as blocks (e.g., paragraphs). The following values of the &#x2018;display&#x2019; property make an element block-level: &#x2018;block&#x2019;, &#x2018;list-item&#x2019;, and &#x2018;table&#x2019;.</p>
-</blockquote>
-<p>&#x5757;&#x5143;&#x7D20;&#xFF08;Block-level elements&#xFF09;&#x662F;&#x6587;&#x6863;&#x5143;&#x7D20;&#x88AB;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x53EF;&#x89C1;&#x7684;&#x5757;&#xFF0C;&#x4F8B;&#x5982;P&#x6807;&#x7B7E;&#x3002;display&#x7684;block&#x3001;list-item&#x3001;table&#x90FD;&#x53EF;&#x4EE5;&#x8BA9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6210;&#x4E3A;&#x5757;&#x5143;&#x7D20;</p>
-<blockquote>
-<p>Block-level boxes are boxes that participate in a block formatting context. Each block-level element generates a principal block-level box that contains descendant boxes and generated content and is also the box involved in any positioning scheme. Some block-level elements may generate additional boxes in addition to the principal box: &#x2018;list-item&#x2019; elements. These additional boxes are placed with respect to the principal box.</p>
-</blockquote>
-<p>&#x5757;&#x7EA7;&#x76D2;&#x5B50;&#x662F;&#x4E3B;&#x8981;&#x7684;box&#x53C2;&#x4E0E;BFC&#x3002;&#x6BCF;&#x4E2A;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x5757;&#x7EA7;&#x76D2;&#x5B50;&#xFF08;block-level box&#xFF09;&#x5305;&#x542B;&#x540E;&#x7EED;&#x76D2;&#x5B50;&#x548C;&#x751F;&#x6210;&#x7684;&#x5185;&#x5BB9;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x5B9A;&#x4F4D;&#x6A21;&#x5F0F;&#xFF08;positioning scheme&#xFF09;&#x7684;&#x76D2;&#x5B50;&#x3002;&#x9664;&#x4E86;&#x4E3B;&#x8981;&#x7684;&#x76D2;&#x5B50;&#xFF0C;&#x4E00;&#x4E9B;&#x5757;&#x5143;&#x7D20;&#x4E5F;&#x751F;&#x6210;&#x989D;&#x5916;&#x7684;&#x76D2;&#x5B50;&#xFF1A;&#x4E00;&#x4E9B; list-item &#x5143;&#x7D20;&#x3002;&#x8FD9;&#x4E9B;&#x989D;&#x5916;&#x7684;&#x76D2;&#x5B50;&#x662F;&#x88AB;&#x653E;&#x7F6E;&#x5230;&#x4E3B;&#x76D2;&#x5B50;&#x4E2D;&#x3002;</p>
-<blockquote>
-<p>Except for table boxes, which are described in a later chapter, and replaced elements, a block-level box is also a block container box. A block container box either contains only block-level boxes or establishes an inline formatting context and thus contains only inline-level boxes. Not all block container boxes are block-level boxes: non-replaced inline blocks and non-replaced table cells are block containers but not block-level boxes. Block-level boxes that are also block containers are called block boxes.</p>
-</blockquote>
-<p>&#x9664;&#x4E86;&#x540E;&#x7EED;&#x7AE0;&#x8282;&#x4F1A;&#x63D0;&#x5230; &#x8868;&#x76D2;&#x5B50;&#xFF08;table boxes&#xFF09;&#x548C;&#x53EF;&#x66FF;&#x4EE3;&#x5143;&#x7D20;&#xFF08;replaced elements&#xFF09;&#xFF0C;&#x5757;&#x7EA7;&#x76D2;&#x5B50;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x5757;&#x5BB9;&#x5668;&#x76D2;&#x3002;&#x5757;&#x5BB9;&#x5668;&#x76D2;&#x8981;&#x4E48;&#x53EA;&#x5305;&#x542B;&#x5757;&#x7EA7;&#x76D2;&#x8981;&#x4E48;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x53EA;&#x5305;&#x542B;&#x884C;&#x7EA7;&#x76D2;&#x7684;IFC&#x3002;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7684;&#x5757;&#x5BB9;&#x5668;&#x76D2;&#x90FD;&#x662F;&#x5757;&#x7EA7;&#x76D2;&#xFF1A;&#x4E0D;&#x53EF;&#x4EE3;&#x66FF;&#x7684;&#x884C;&#xFF08;&#x5185;&#xFF09;&#x5757;&#x548C;&#x4E0D;&#x53EF;&#x53D6;&#x4EE3;&#x7684;table cell&#x662F;&#x5757;&#x5BB9;&#x5668;&#x4F46;&#x662F;&#x4E0D;&#x662F;&#x5757;&#x7EA7;&#x76D2;&#x3002;<br>&#x662F;&#x5757;&#x5BB9;&#x5668;&#xFF08;block containers&#xFF09;&#x7684;&#x5757;&#x7EA7;&#x76D2;&#x5B50;&#xFF08;Block-level boxes&#xFF09;&#x6211;&#x4EEC;&#x79F0;&#x4E4B;&#x4E3A;&#x5757;&#x76D2;&#xFF08;block boxes&#xFF09;</p>
-<blockquote>
-<p>The three terms &#x201C;block-level box,&#x201D; &#x201C;block container box,&#x201D; and &#x201C;block box&#x201D; are sometimes abbreviated as &#x201C;block&#x201D; where unambiguous.</p>
-</blockquote>
-<p>block-level box&#x3001;block container box&#x3001;block box&#x8FD9;&#x4E09;&#x4E2A;&#x672F;&#x8BED;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x65F6;&#x660E;&#x786E;&#x5730;&#x7B80;&#x79F0;&#x4E3A;&#x201D;block&#x201D;&#x3002;</p>
-<h3 id="&#x533F;&#x540D;&#x5757;&#x76D2;"><a href="#&#x533F;&#x540D;&#x5757;&#x76D2;" class="headerlink" title="&#x533F;&#x540D;&#x5757;&#x76D2;"></a>&#x533F;&#x540D;&#x5757;&#x76D2;</h3>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VFC/">VFC</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/Html5/">Html5</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
