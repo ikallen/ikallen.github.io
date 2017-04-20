@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: File Upload | 
+            getElementsByTagName和querySelectorAll | 
         
         ikallen
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="kallen">
     <meta name="description" content="a web for develop">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,DOM">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: File Upload | ikallen">
+    <meta property="og:title" content="getElementsByTagName和querySelectorAll | ikallen">
     <meta property="og:description" content="a web for develop">
-    
+    <meta property="og:article:tag" content="DOM"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -209,99 +209,256 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
-        
-        
-            <!-- Paradox Thumbnail -->
-            <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#A-案例"><span class="post-toc-number">1.</span> <span class="post-toc-text">A.案例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#B-解析"><span class="post-toc-number">2.</span> <span class="post-toc-text">B.解析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">element.getElementsByTagName</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">element.querySelectorAll</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTMLCollection和NodeList"><span class="post-toc-number">3.</span> <span class="post-toc-text">HTMLCollection和NodeList</span></a></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/07/05/Html5-FileReader/">FileReader</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Web API
-
-https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader
-
-FileReader&#x4F7F;&#x7528;FileReader&#x5BF9;&#x8C61;,web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5F02;&#x6B65;&#x7684;&#x8BFB;&#x53D6;&#x5B58;&#x50A8;&#x5728;&#x7528;&#x6237;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;&#x6587;&#x4EF6;(&#x6216;&#x8005;&#x539F;&#x59CB;&#x6570;&#x636E;&#x7F13;&#x51B2;)&#x5185;&#x5BB9;,&#x53EF;&#x4EE5;&#x4F7F;&#x7528;File&#x5BF9;&#x8C61;&#x6216;&#x8005;Blob&#x5BF9;&#x8C61;&#x6765;&#x6307;&#x5B9A;&#x6240;&#x8981;&#x5904;&#x7406;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x6570;&#x636E;.&#x5176;&#x4E2D;File&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x662F;&#x6765;&...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/07/05/Html5-FileReader/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="kallen's avatar">
-            </div>
-            <div>
-                <strong>kallen</strong>
-                <span>7月 05, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Html5/">Html5</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-        
-        
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')')
-        
-        locatePost = locatePost.next();
-    }
+    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                getElementsByTagName和querySelectorAll
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>kallen</strong>
+        <span>4月 20, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/DOM/">DOM</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=getElementsByTagName和querySelectorAll&url=http://yoursite.com//2017/04/20/getElementsByTagName和querySelectorAll/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=getElementsByTagName和querySelectorAll&url=http://yoursite.com//2017/04/20/getElementsByTagName和querySelectorAll/index.html&via=kallen" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com//2017/04/20/getElementsByTagName和querySelectorAll/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2017/04/20/getElementsByTagName和querySelectorAll/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>getElementsByTagName&#x548C;querySelectorAll&#x6211;&#x4EEC;&#x5728;DOM&#x4E2D;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#xFF0C;&#x4ECA;&#x5929;&#x6211;&#x4EEC;&#x6765;&#x5206;&#x6790;&#x4E0B;&#x5B83;&#x7684;&#x7EC6;&#x8282;&#x3002;<br><a id="more"></a></p>
+<h3 id="A-&#x6848;&#x4F8B;"><a href="#A-&#x6848;&#x4F8B;" class="headerlink" title="A.&#x6848;&#x4F8B;"></a>A.&#x6848;&#x4F8B;</h3><pre><code>// HTML
+&lt;h1 id=&quot;parent&quot;&gt;
+    &lt;div&gt;1&lt;/div&gt;
+    &lt;div&gt;2&lt;/div&gt;
+&lt;/h1&gt;
+
+// JS
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var parent = document.getElementById(&apos;parent&apos;);
+    var child_nodes = parent.children;
+    console.log(child_nodes.length);
+    parent.appendChild(document.createElement(&apos;div&apos;));
+    console.log(child_nodes.length);
+&lt;/script&gt;
+</code></pre><p>&#x65AD;&#x70B9;&#x8C03;&#x8BD5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x5F53;&#x7ED9;parent&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;div&#x8282;&#x70B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;div&#x7684;&#x6570;&#x91CF;&#x5C31;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF01;</p>
+<h3 id="B-&#x89E3;&#x6790;"><a href="#B-&#x89E3;&#x6790;" class="headerlink" title="B.&#x89E3;&#x6790;"></a>B.&#x89E3;&#x6790;</h3><p></p><h4>element.getElementsByTagName</h4><p></p>
+<blockquote>
+<p>The Element.getElementsByTagName() method returns a live HTMLCollection of elements with the given tag name. The subtree underneath the specified element is searched, excluding the element itself. The returned list is live, meaning that it updates itself with the DOM tree automatically. Consequently, there is no need to call several times Element.getElementsByTagName() with the same element and arguments.</p>
+</blockquote>
+<p>&#x4ECE;API&#x6587;&#x6863;&#x89E3;&#x91CA;&#x6765;&#x770B;&#xFF0C;<code>getElementsByTagName</code>&#x6839;&#x636E;&#x6807;&#x7B7E;&#x540D;&#x83B7;&#x53D6;&#x7684;&#x662F;&#x5B9E;&#x65F6;&#x7684;HTMLCollection&#x96C6;&#x5408;&#x3002;&#x5F53;DOM&#x6811;&#x66F4;&#x65B0;&#x65F6;&#xFF0C;HTMLCollection&#x96C6;&#x5408;&#x4E5F;&#x4F1A;&#x5B9E;&#x65F6;&#x66F4;&#x65B0;&#x3002;</p>
+<p></p><h4>element.querySelectorAll</h4><p></p>
+<blockquote>
+<p>Returns a non-live NodeList of all elements descended from the element on which it is invoked that matches the specified group of CSS selectors. (The base element itself is not included, even if it matches.)</p>
+</blockquote>
+<p>&#x800C;querySelectorAll&#x8FD4;&#x56DE;&#x7684;&#x4E0D;&#x662F;&#x5B9E;&#x65F6;&#x7684;NodeList&#x7ED3;&#x5408;&#x3002;</p>
+<h3 id="HTMLCollection&#x548C;NodeList"><a href="#HTMLCollection&#x548C;NodeList" class="headerlink" title="HTMLCollection&#x548C;NodeList"></a>HTMLCollection&#x548C;NodeList</h3><blockquote>
+<p>An HTMLCollection in the HTML DOM is live; it is automatically updated when the underlying document is changed.</p>
+</blockquote>
+<p>&#x4ECE;API&#x4E0A;&#x6765;&#x770B;&#xFF0C;HTMLCollection &#x96C6;&#x5408;&#x662F;&#x5B9E;&#x65F6;&#x7684;&#x3002;&#x800C;NodeList&#x5927;&#x591A;&#x60C5;&#x51B5;&#x4E5F;&#x662F;&#x5B9E;&#x65F6;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x5C11;&#x6570;&#x60C5;&#x51B5;&#xFF08;document.querySelectorAll&#xFF09;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684;NodeList</p>
+<blockquote>
+<p>In some cases, the NodeList is a live collection, which means that changes in the DOM are reflected in the collection. For example, Node.childNodes is live:<br>In other cases, the NodeList is a static collection, meaning any subsequent change in the DOM does not affect the content of the collection. document.querySelectorAll returns a static NodeList.</p>
+</blockquote>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/04/12/Mongo-distinct/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -447,6 +604,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
